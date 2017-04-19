@@ -1,0 +1,32 @@
+<div class="container" id="startCon">
+    <!-- 搜索框-->
+  	<div class="form-group has-feedback" id="searchmodal">
+        <input type="text" ng-model="cxwd" class="form-control" placeholder="请输入要查询的网点"/>
+        <span class="form-control-feedback glyphicon glyphicon-search"></span>
+   </div>
+    <!-- 网点列表-->
+    <div id="wangD-list">
+    	<div ng-if="wdList==''" class="tishi text-center text-danger">搜索网点不存在</div>
+    	 <ul class="list-group wangd" ng-repeat="wd in wdList">
+        	<a href="#/detail/{{wd.ID}}">
+	        	<li class="list-group-item"><span class="wdname">网点名称：</span><span class="wdcon">{{wd.name}}</span></li>
+	        	<li class="list-group-item"><span class="wdname">网点地址：</span><span class="wdcon">{{wd.address}}</span></li>
+	        	<li class="list-group-item"><span class="wdname">营业时间：</span><span class="wdcon">{{wd.worktime}}</span></li>
+        	</a>
+        	<li class="list-group-item text-center"><a href="#/order/{{wd.ID}}" ng-click="startActive()">立即预约</a></li>
+            <!--<a href="#/detail/{{wangd.did}}" class="list-group-item" ng-repeat="dish in dishList"></a>-->
+        </ul>
+    </div>
+       
+    <!-- 加载更多的按钮-->
+    <!--<button ng-show='hasMore' ng-click='loadMore()' class="btn btn-success btn-block">加载更多</button>
+    <p class="alert alert-info " ng-hide="hasMore">没有更多数据可以加载了</p>-->
+    <!--加载动画-->
+    <div id="loading" ng-show="loadingShow">
+    	<div>
+    		<img src="img/loading-main.gif" alt="" />
+    	</div>
+    </div>
+<!--<div class="row footloading text-center" ng-show="loadMore"><img class="ui-responsive" src="img/loading.gif" alt="" /></div>-->
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

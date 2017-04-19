@@ -1,0 +1,45 @@
+<div class="container" id="detail_container">
+	 <div class="panel panel-default">
+       	<div class="panel-body" >
+       		<div>
+	       		<h5>网点信息</h5>
+	       		<ul class="list-unstyled xqxinxi col-sm-12 col-xs-12">
+	       			<li>
+	       				<span class="xqname">名称：</span>
+	       				<span class="xqcontent">{{wdList.name}}</span>
+	       			</li>
+	       			<li>
+	       				<span class="xqname">地址：</span>
+	       				<span class="xqcontent">{{wdList.address}}</span>
+	       			</li>
+	       			<li>
+	       				<span class="xqname">时间：</span>
+	       				<span class="xqcontent">{{wdList.worktime}}</span>
+	       			</li>
+	       		</ul>
+       		</div>
+       		<div>
+		    	<h5>业务列表</h5>
+		    	 <ul class="list-unstyled col-sm-12 col-xs-12" id="_detailyewu">
+				    <li class="col-xs-12 col-sm-12">
+				    	<span class="col-sm-3 col-xs-3 text-center">名称</span>
+				    	<span class="col-sm-3 col-xs-3 text-center">等待人数</span>
+				    	<span class="col-sm-3 col-xs-3 text-center">当前号码</span>
+				    	<span class="col-sm-3 col-xs-3 text-center">是否可预约</span>
+				    </li>
+				     <li class="col-xs-12 col-sm-12" ng-repeat="detail in detailList">
+				    	<span class="col-sm-3 col-xs-3 text-center">{{detail.name}}</span>
+				    	<span class="col-sm-3 col-xs-3 text-center">{{detail.waitnum}}</span>
+				    	<span class="col-sm-3 col-xs-3 text-center">{{detail.nownumber}}</span>
+				    	<span ng-show="{{detail.isQueue}}" class="col-sm-3 col-xs-3 text-center"><a href="#/order/{{wdList.ID}}" class="btn btn-info" id="{{detail.code}}" ng-click="detailActive(detail.code)">预约</a></span>
+				    	<span ng-hide="{{detail.isQueue}}"  class="col-sm-3 col-xs-3 text-center"><a href="#/order" class="btn btn-info disabled">不可预约</a></span>
+				    </li>
+			    </ul>
+		    </div>
+	    </div>
+	</div>
+	<div id="loading" ng-show="loadingShow">
+    	<img src="img/loading-main.gif" alt="" />
+    </div>
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

@@ -1,0 +1,55 @@
+<div class="container myOrder" id="_orderDetail">
+	<div id="loading" ng-show="loadingShow">
+    	<img src="img/loading-main.gif" alt="" />
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title text-center">预约详情</h4>
+            </div>
+            <div class="panel-body">
+            	<ul class="list-group">
+            		<li class="list-group-item">
+            			<span class="myorder_title">验&nbsp;&nbsp;证&nbsp;&nbsp;码：</span><span class="myorder_content">{{orDetail.ordernum}}</span>
+            		</li>
+            		<li class="list-group-item">
+            			<span class="_title">网点名称：</span><span class="myorder_content">{{orDetail.yytname}}</span>
+            		</li>
+            		<li class="list-group-item">
+            			<span class="myorder_title">网点地址：</span><span class="myorder_content">{{orDetail.address}}</span>
+            		</li>
+            		<li class="list-group-item">
+            			<span class="myorder_title">业务名称：</span><span class="myorder_content">{{orDetail.queuename}}</span>
+            		</li>
+            		<li class="list-group-item">
+            			<span class="myorder_title">预约日期：</span><span class="myorder_content">{{orDetail.orderdate}}</span>
+            		</li>
+            		<li class="list-group-item">
+            			<span class="myorder_title">预约时间：</span><span class="myorder_content">{{orDetail.ordertime}}</span>
+            		</li>
+            		<li class="list-group-item">
+            			<span class="_title">身份证号：</span><span class="myorder_content">{{orDetail.IDno}}</span>
+            		</li>
+            		<li ng-if="orDetail.isqueue==0" class="list-group-item">
+            			<span class="myorder_title">办理时间：</span><span class="myorder_content">未办理</span>
+            		</li>
+            		<li ng-if="orDetail.isqueue==1" class="list-group-item">
+            			<span class="myorder_title">办理时间：</span><span class="myorder_content">{{orDetail.queuetime}}</span>
+            		</li>
+            		<li ng-if="orDetail.isqueue==0" class="list-group-item">
+            			<p>现场取票流程：</p>
+            			<p>1、选择取票方式</p>
+            			<p>2、输入验证码或刷身份证取票</p>
+            			<p>3、等待叫号办理</p>
+            		</li>
+            		<li ng-if="orDetail.isqueue==0" class="list-group-item">
+            			<p class="text-danger">提示：<p>
+            			<p class="text-danger">请您在预约日期到指定网点办理业务，逾期将作废，请合理安排好时间！如您预约今日业务，请于30分钟后在排队机取票。</p>
+            		</li>
+            	</ul>
+            	<div class="text-center"><a class="btn btn-info btn-lg" href="#/myorder/{{morenSol}}" ng-click="back()">返回</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

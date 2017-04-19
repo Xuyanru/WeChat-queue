@@ -1,0 +1,65 @@
+<div class="container" id="order-wangd">
+	<div class="wangDsel">
+		<form action="" class="form-inline">
+		<div class="form-group has-feedback">
+			<label>选择网点：</label>
+			<select name="selWd" ng-model="selWD" value="" id="selWd">
+				<option value="">-请选择-</option>				
+				
+			</select>
+			<span ng-show="selWdOk" class="form-control-feedback glyphicon glyphicon-ok text-success"></span>
+			<span ng-show="selWdsign" class="form-control-feedback glyphicon glyphicon-info-sign text-danger"></span>
+		</div>
+		<div class="form-group has-feedback">
+			<label>选择业务：</label>
+			<select name="selYw" ng-model="selYw" value="" id="selYW">			
+				<option value="">-请选择-</option>
+			</select>
+			<span ng-show="selYwOk" class="form-control-feedback glyphicon glyphicon-ok text-success"></span>
+			<span ng-show="selYwsign" class="form-control-feedback glyphicon glyphicon-info-sign text-danger"></span>
+		</div>
+		<div class="form-group has-feedback">
+			<label for="selTime">预约日期：</label>
+			<input  type="date" name="time" id="selTime" value=""   required placeholder="请选择预约日期"/>
+			 <span ng-show="timeOk" class="form-control-feedback glyphicon glyphicon-ok text-success"></span>
+			 <span ng-show="timesign"  class="form-control-feedback glyphicon glyphicon-info-sign text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label for="">剩余票数：</label>
+			<span class="sy-num">{{shengyu}}</span>
+		</div>
+		<div class="form-group has-feedback">
+			<label for="tel">手&nbsp;&nbsp;机&nbsp;号：</label>
+			<input  ng-model="tel" ng-blur="texttel()" type="number" name="tel" id="tel" value="15830733627" placeholder="请输入手机号" required/>
+			 <span ng-show="telOk" class="form-control-feedback glyphicon glyphicon-ok text-success"></span>
+			 <span ng-show="telsign"  class="form-control-feedback glyphicon glyphicon-info-sign text-danger"></span>
+		</div>
+		<div class="form-group has-feedback">
+			<label for="uId">身份证号：</label>
+			<input ng-blur="textid()" type="text" name="uId" id="uId" value="" placeholder="请输入身份证号" required/>
+			 <span ng-show="idOk" class="form-control-feedback glyphicon glyphicon-ok text-success"></span>
+			 <span ng-show="idsign"  class="form-control-feedback glyphicon glyphicon-info-sign text-danger"></span>
+		</div>
+	</form>
+		<div class="container-fluid" id="logIn">
+			<button id="orderCLick"  class="btn btn-primary col-sm-5 col-xs-5">预约</button>
+			<a href="#" class="btn btn-warning col-sm-5 col-xs-5 col-xs-offset-1 col-sm-offset-1 resetbtn">重置</a>
+		</div>
+	</div>
+	<div id="mymodal" class="modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row text-center">
+                       	预约失败
+                    </div>
+                    <p id="missMsg" class="text-center text-danger"></p>
+                    <div class="text-center">
+                        <button class="btn btn-danger">确定</button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+   </div>
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

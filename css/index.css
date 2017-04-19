@@ -1,0 +1,253 @@
+body{
+   	margin-bottom:50px;
+    box-sizing: border-box;
+    background:url("../img/body-bg.png") no-repeat;
+    background-size:cover;
+    overflow: auto;
+    margin:0;
+}
+body .ng-scope>.container,body .ng-scope>.container-fluid{
+	width:100%;
+	height:100%;
+	overflow: auto;
+}
+::-webkit-scrollbar{
+		display:none;
+}
+*{
+	box-sizing: border-box;
+}
+a:link{
+	text-decoration: none;
+}
+a:visited{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+a:active{
+	text-decoration: none;
+}
+#startCon .list-group{
+	margin-bottom: 10px;
+}
+/*#startCon .list-group span{
+	display: inline-block;
+}*/
+#wangD-list{
+	padding:10px 5px 5px 5px;
+	max-height:calc(100% - 60px);
+	border:1px solid #999999;
+	border-radius: 5px;
+	overflow: auto;
+	background: rgba(200,200,200,0.3);
+}
+.form-group{
+	margin-bottom: 10px;
+}
+select,input{
+	background: none;
+}
+.navbar-fixed-bottom{
+	 background:url("../img/foot-bg.png");
+}
+#footbtn li a.active{
+	color:#000000;
+}
+.navbar-default .navbar-nav > li > a {
+	color:#FFFFFF;
+}
+#wangD-list .wangd li .wdcon{
+	display: inline-block;
+	vertical-align: top;
+	width:calc(100% - 70px);
+}
+.wangd>a{
+	display: block;
+	color:#444444;	
+}
+.wangd>a li:last-child{
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom: none;
+}
+form select,form input{
+	height:26px;
+	line-height: 26px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border:none;
+	outline: none;
+}
+form .form-group{
+	margin:0px;
+	border-bottom:1px solid #000000;
+	padding:10px;
+}
+#order-wangd>div{
+	background:rgba(200,200,200,0.5);
+	border:1px solid #AAAAAA;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding:10px;
+}
+#logIn{
+	margin:20px;
+}
+.myOrder ul.list-group li.list-group-item{
+	overflow: hidden;
+}
+.myOrder ul.list-group li.list-group-item span.myorder_content,#detail_container .panel-body ul.xqxinxi span.xqcontent{
+	display: inline-block;
+	vertical-align: top;
+}
+#orderChange li.active{
+	background: #48819D;
+}
+#_orderList li.list-group-item span{
+	font-size: 13px;
+	padding:0;
+	color:#404040;
+}
+#_orderList li.list-group-item{
+	padding:10px;
+}
+.form-group.has-feedback{
+	margin-top:10px;
+}
+#_detailyewu{
+	padding:0;
+	margin:0;
+}
+#_detailyewu li span{
+	padding:0;
+}
+#detail_container{
+	padding:10px 8px;
+}
+#detail_container ul{
+	padding-top:10px;
+	padding-bottom: 10px;
+	border:1px solid #999999;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#detail_container .panel-default{
+	background:rgba(255,255,255,0.8);
+}
+#detail_container h5{
+	width:70px;
+	background: #FFFFFF;
+	text-align: center;
+	clear: both;
+	font-weight: bold;
+	position: absolute;
+	top:-17px;
+	left:15px;
+	z-index: 10;
+	
+}
+#detail_container .panel-body>div{
+	position: relative;
+	clear: both;
+}
+#_detailyewu a{
+	width:80%;
+	height:30px;
+	padding:5px 0;
+}
+#_detailyewu li{
+	height:35px;
+	line-height: 35px;
+	padding:0;
+}
+#_detailyewu li:first-child{
+	height:25px;
+	line-height: 25px;
+}
+#detail_container .panel-body{
+	padding:20px 10px;
+}
+#detail_container .panel-body ul.xqxinxi{
+	margin-bottom: 20px;
+}
+#detail_container .panel-body ul.xqxinxi li{
+	padding:5px 0;
+}
+#yanzhengm{
+	font-size: 25px;
+}
+#myLogin .panel{
+	border-bottom: 10px;
+	-webkit-border-radius: 10px;
+	border:1px solid #D4C1B6;
+	padding: 10px 0;
+	position: absolute;
+	top:40%;
+	left: 0;
+	transform:translateY(-50%);
+}
+#myLogin li{
+	margin:5px 0;
+}
+#myLogin input{
+	border:1px solid #A9836E;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	height:35px;
+	line-height: 35px;
+}
+#myLogin input:focus{
+	box-shadow: 0 0 10px #A9836E;
+}
+.footloading img{
+	width:30px;
+}
+/*预约信息右侧图标*/
+.has-feedback label ~ .form-control-feedback {
+     top:0px; 
+}
+/*模态框*/
+#mymodal .modal-body{
+	padding:0;
+	padding-bottom: 20px;
+}
+#mymodal .modal-dialog{
+	width:80%;
+	margin:30% auto 0;
+}
+#mymodal .row{
+	background: #DDDDDD;
+	font-size: 1.2em;
+	height:35px;
+	line-height: 35px;
+	margin:0;
+}
+#missMsg{
+	margin:10px;
+	line-height: 35px;
+}
+/*加载动画*/
+#loading{
+	width:100%;
+	height:100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 1000;
+	background:url("../img/body-bg.png") no-repeat;
+	background-size:cover ;
+}
+#loading>div{
+	width:100%;
+	height:100%;
+	background: rgba(200,200,200,0.5);
+}
+#loading img{
+	width:80%;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}

@@ -1,0 +1,48 @@
+<div class="container" ng-hide="logIn" id="myOrder_list">
+	<div id="loading" ng-show="loadingShow">
+    	<img src="img/loading-main.gif" alt="" />
+    </div>
+    <div class="row">
+    	<ul class="list-unstyled text-center" id="orderChange">
+    		<li class="col-sm-6 col-xs-6 bg-info active" ng-click="handel(0)"><h5>未办理</h5></li>
+    		<li class="col-sm-6 col-xs-6 bg-info" ng-click="handel(1)"><h5>已办理</h5></li>
+    	</ul> 
+    </div>
+    <ul class="list-group list-unstyled row" id="_orderList">
+	    <li class="list-group-item list-group-item-warning col-xs-12 col-sm-12">
+	    	<span class="col-sm-4 col-xs-4 text-center">网点</span>
+	    	<span class="col-sm-4 col-xs-4 text-center">日期</span>
+	    	<span class="col-sm-3 col-xs-3 text-center">验证码</span>
+	    </li>
+	    <li class="list-group-item col-xs-12 col-sm-12"  ng-repeat="order in orderList">
+	    	<a href="#/orderdetail/{{order}}" ng-click="solution(order.isqueue)">
+		    	<span class="col-sm-4 col-xs-4 text-center">{{order.yytname}}</span>
+		    	<span class="col-sm-4 col-xs-4 text-center">{{order.orderdate}}</span>
+		    	<span class="col-sm-3 col-xs-3 text-center">{{order.ordernum}}</span>
+		    	<span class="col-sm-1 col-xs-1 glyphicon text-right glyphicon-chevron-right" aria-hidden="true"></span>
+	    	</a>
+	    </li>
+   	</ul>
+   
+</div>
+<div ng-show="logIn" class="container" id="myLogin">
+	<div class="panel panel-default col-sm-10 col-xs-10 col-sm-offset-1 col-xs-offset-1">
+		<div  class="panel-body">
+			<div class="text-center text-danger">请输入个人信息进行预约查询</div>
+			<form action="">
+			<ul class="list-unstyled">
+				<li class="col-sm-12 col-xs-12"><input id="searchPhone" ng-model="searchphone" class="col-sm-12 col-xs-12" type="number" placeholder="请输入手机号"/></li>
+				<li class="col-sm-12 col-xs-12"><input id="searchid" maxlength='18' class="col-sm-12 col-xs-12" type="text" placeholder="请输入身份证号码" /></li>
+				<li class=" col-sm-12 col-xs-12">
+					<a ng-click="logInBtn()" href="" class="btn btn-success col-sm-5 col-xs-5">确定</a>
+					<a id="myLogin-cancel" href="" class="btn btn-danger col-sm-5 col-xs-5 col-sm-offset-2 col-xs-offset-2">取消</a>
+				</li>
+			</ul>
+			
+		</form>
+	</div>
+	</div>
+	
+</div>
+
+<div ng-include="'tpl/include/footer.html'"></div>
